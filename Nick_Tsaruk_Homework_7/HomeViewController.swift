@@ -13,18 +13,24 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         avatarView.layer.cornerRadius = 100
-        avatarView.layer.borderColor = UIColor.systemPurple.cgColor
-        avatarView.layer.borderWidth = 3
+        avatarView.layer.borderColor = UIVariables.normalColor.cgColor
+        avatarView.layer.borderWidth = UIVariables.borderWidth
         
-        customizeButtonOutlet.layer.cornerRadius = 5
-        customizeButtonOutlet.layer.borderColor = UIColor.systemPurple.cgColor
-        customizeButtonOutlet.layer.borderWidth = 1
+        customizeButtonOutlet.layer.cornerRadius = UIVariables.buttonCornerRadius
+        customizeButtonOutlet.layer.borderColor = UIVariables.normalColor.cgColor
+        customizeButtonOutlet.layer.borderWidth = UIVariables.borderWidth
+        customizeButtonOutlet.tintColor = UIVariables.normalColor
     }
 
-    @IBOutlet weak var avatarView: UIView!
-    @IBOutlet weak var noAvatarLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var customizeButtonOutlet: UIButton!
+    @IBOutlet private weak var avatarView: UIView!
+    @IBOutlet private weak var noAvatarLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var customizeButtonOutlet: UIButton!
     
+    @IBAction func customizeButtonAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "CustomizeStoryboard", bundle: nil)
+        guard let customizeVC = storyboard.instantiateViewController(withIdentifier: "CustomizeViewController") as? CustomizeViewController else { return }
+        present(customizeVC, animated: true)
+    }
 }
 
