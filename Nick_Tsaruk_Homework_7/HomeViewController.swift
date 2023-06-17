@@ -7,13 +7,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        avatarView.layer.cornerRadius = 100
+        avatarView.layer.borderColor = UIColor.systemPurple.cgColor
+        avatarView.layer.borderWidth = 3
+        
+        customizeButtonOutlet.layer.cornerRadius = 5
+        customizeButtonOutlet.layer.borderColor = UIColor.systemPurple.cgColor
+        customizeButtonOutlet.layer.borderWidth = 1
     }
 
-
+    @IBOutlet weak var avatarView: UIView!
+    @IBOutlet weak var noAvatarLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var customizeButtonOutlet: UIButton!
+    
 }
 
