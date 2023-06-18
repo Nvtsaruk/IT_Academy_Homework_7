@@ -30,7 +30,8 @@ class HomeViewController: UIViewController {
     @IBAction func customizeButtonAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "CustomizeStoryboard", bundle: nil)
         guard let customizeVC = storyboard.instantiateViewController(withIdentifier: "CustomizeViewController") as? CustomizeViewController else { return }
-        present(customizeVC, animated: true)
+        let navController = UINavigationController(rootViewController: customizeVC) // Creating a navigation controller with customizeVC at the root of the navigation stack.
+        self.present(navController, animated:true, completion: nil)
     }
 }
 

@@ -19,7 +19,7 @@ class CustomizeViewController: UIViewController {
         saveButtonOutlet.layer.cornerRadius = UIVariables.buttonCornerRadius
         saveButtonOutlet.tintColor = .white
         saveButtonOutlet.backgroundColor = UIVariables.normalColor
-        
+        saveButtonOutlet.isHidden = true
         editButtonOutlet.layer.cornerRadius = UIVariables.buttonCornerRadius
         editButtonOutlet.layer.borderColor = UIVariables.normalColor.cgColor
         editButtonOutlet.layer.borderWidth = UIVariables.borderWidth
@@ -35,13 +35,18 @@ class CustomizeViewController: UIViewController {
     @IBOutlet private weak var editButtonOutlet: UIButton!
     @IBOutlet private weak var cancelButtonOutlet: UIButton!
     
-    @IBAction func cancelButtonAction(_ sender: Any) {
+    @IBAction private func cancelButtonAction() {
         dismiss(animated: true)
     }
     
     
-    @IBAction func saveButtonAction(_ sender: Any) {
+    @IBAction private func saveButtonAction() {
         dismiss(animated: true)
     }
     
+    @IBAction private func editButtonAction() {
+        let storyboard = UIStoryboard(name: "GenderStoryboard", bundle: nil)
+        guard let genderVC = storyboard.instantiateViewController(withIdentifier: "GenderViewController") as? GenderViewController else { return }
+        navigationController?.pushViewController(genderVC, animated: true)
+    }
 }

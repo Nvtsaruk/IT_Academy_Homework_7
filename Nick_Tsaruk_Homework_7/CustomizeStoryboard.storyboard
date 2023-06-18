@@ -52,7 +52,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
-                                    <action selector="saveButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pDn-Qo-DYK"/>
+                                    <action selector="saveButtonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rbT-9V-FGA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glb-9M-Ybm">
@@ -63,6 +63,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                <connections>
+                                    <action selector="editButtonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hy0-OL-HV9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ep-Nb-qsz">
                                 <rect key="frame" x="46.666666666666657" y="750" width="300" height="38"/>
@@ -76,7 +79,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                 <connections>
-                                    <action selector="cancelButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Coy-eO-kOz"/>
+                                    <action selector="cancelButtonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KVg-4O-bAU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,6 +98,7 @@
                             <constraint firstItem="Zq1-UK-tHO" firstAttribute="top" secondItem="eEh-sN-4hY" secondAttribute="bottom" constant="30" id="zJa-cH-fdn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="y0M-9U-Uug"/>
                     <connections>
                         <outlet property="avatarView" destination="eEh-sN-4hY" id="5Wl-A3-ysE"/>
                         <outlet property="cancelButtonOutlet" destination="2ep-Nb-qsz" id="lYP-iC-ZUA"/>
@@ -104,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
