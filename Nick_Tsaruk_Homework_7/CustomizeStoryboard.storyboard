@@ -51,9 +51,6 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
-                                <connections>
-                                    <action selector="saveButtonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="rbT-9V-FGA"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glb-9M-Ybm">
                                 <rect key="frame" x="46.666666666666657" y="707" width="300" height="38"/>
@@ -63,9 +60,6 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Edit"/>
-                                <connections>
-                                    <action selector="editButtonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hy0-OL-HV9"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ep-Nb-qsz">
                                 <rect key="frame" x="46.666666666666657" y="750" width="300" height="38"/>
@@ -78,9 +72,6 @@
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancelButtonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KVg-4O-bAU"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -99,12 +90,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y0M-9U-Uug"/>
-                    <connections>
-                        <outlet property="avatarView" destination="eEh-sN-4hY" id="5Wl-A3-ysE"/>
-                        <outlet property="cancelButtonOutlet" destination="2ep-Nb-qsz" id="lYP-iC-ZUA"/>
-                        <outlet property="editButtonOutlet" destination="glb-9M-Ybm" id="UWh-LC-6Fq"/>
-                        <outlet property="saveButtonOutlet" destination="QL1-eL-wuu" id="433-8l-Pdt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
