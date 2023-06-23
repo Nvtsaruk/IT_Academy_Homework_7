@@ -4,8 +4,12 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let avatarView = UIView()
-    let nameLabel = UILabel()
     let avatarLabel = UILabel()
+    let avatarImg = UIImageView()
+    let nameLabel = UILabel()
+    
+    
+    var config = AccountConfig(nickName: "No Name")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,15 +17,14 @@ class HomeViewController: UIViewController {
         setupAvatarView()
         setupAvatarLabel()
         setupNameLabel()
+        setupAvatarImg()
         
-        let customizeButton = createButton(title: "Customize", color: UIVariables.clearColor, titleColor: UIVariables.normalColor)
+        let customizeButton = RoundedButton(title: "Customize", border: true, filled: false)
         view.addSubview(customizeButton)
         NSLayoutConstraint.activate([
-            customizeButton.widthAnchor.constraint(equalToConstant: 300),
-            customizeButton.heightAnchor.constraint(equalToConstant: 38),
-            customizeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            customizeButton.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 30)
-        ])
+                    customizeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                    customizeButton.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 30)
+                ])
         customizeButton.addTarget(self, action: #selector(customizeButtonAction), for: .touchUpInside)
         
     }
@@ -49,8 +52,18 @@ class HomeViewController: UIViewController {
             avatarLabel.centerYAnchor.constraint(equalTo: avatarView.centerYAnchor)
         ])
     }
+    private func setupAvatarImg() {
+        avatarImg.image = config.avatarImg
+        avatarImg.tintColor = UIVariables.normalColor
+        avatarView.addSubview(avatarImg)
+        avatarImg.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            avatarImg.centerXAnchor.constraint(equalTo: avatarView.centerXAnchor),
+            avatarImg.centerYAnchor.constraint(equalTo: avatarView.centerYAnchor)
+        ])
+    }
     private func setupNameLabel() {
-        nameLabel.text = "No Name"
+        nameLabel.text = config.nickName
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(nameLabel)
         NSLayoutConstraint.activate([
@@ -58,31 +71,25 @@ class HomeViewController: UIViewController {
             nameLabel.topAnchor.constraint(equalTo: avatarView.bottomAnchor, constant: 30)
         ])
     }
-    func createButton(title: String, image: UIImage? = nil, color: UIColor,titleColor: UIColor) -> UIButton {
-        let button = UIButton()
-        button.setTitle(title, for: .normal)
-        button.titleLabel?.font =  UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.regular)
-        button.backgroundColor = color
-        button.setTitleColor(titleColor, for: .normal)
-        button.layer.borderColor = UIVariables.normalColor.cgColor
-        button.layer.borderWidth = UIVariables.borderWidth
-        button.layer.cornerRadius = UIVariables.buttonCornerRadius
-        button.translatesAutoresizingMaskIntoConstraints = false
-        guard let image else { return button }
-        button.setImage(image, for: .normal)
-        button.tintColor = UIColor.white
-        return button
-    }
     
     @objc func customizeButtonAction(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "CustomizeStoryboard", bundle: nil)
-//        guard let customizeVC = storyboard.instantiateViewController(withIdentifier: "CustomizeViewController") as? CustomizeViewController else { return }
-//        let navController = UINavigationController(rootViewController: customizeVC) // Creating a navigation controller with customizeVC at the root of the navigation stack.
-//        self.present(navController, animated:true, completion: nil)
-        let navVC = UINavigationController(rootViewController: CustomizeViewController())
-//            navVC.modalPresentationStyle = .fullScreen
-//            self.present(navVC, animated: true, completion: nil)
-        present(navVC, animated: true)
+        let customizeVC = CustomizeViewController()
+        let navController = UINavigationController(rootViewController: customizeVC) // Creating a navigation controller with customizeVC at the root of the navigation stack.
+        config.nickName = nameLabel.text ?? "No Name"
+        config.avatarImg = avatarImg.image
+        customizeVC.customizeDelegate = self
+        self.present(navController, animated:true, completion: nil)
     }
+}
+
+extension HomeViewController: AccountDelegate {
+    func saveAccountConfig(_ config: AccountConfig) {
+        nameLabel.text = config.nickName
+        guard let img = config.avatarImg else { return }
+        avatarLabel.isHidden = true
+        avatarImg.image = img
+    }
+    
+    
 }
 

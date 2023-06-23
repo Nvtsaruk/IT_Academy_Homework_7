@@ -9,25 +9,53 @@ import UIKit
 
 class GenderViewController: UIViewController {
     
+    let viewTitle = UILabel()
+    var genderDelegate: AccountDelegate?
+    var config = AccountConfig(nickName: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let genderButtons = [maleButtonOutlet, femaleButtonOutlet]
-        genderButtons.forEach { button in
-            guard let button = button else { return }
-            button.layer.cornerRadius = UIVariables.buttonCornerRadius
-            button.layer.borderColor = UIVariables.normalColor.cgColor
-            button.layer.borderWidth = UIVariables.borderWidth
-            button.tintColor = UIVariables.normalColor
-        }
+        
+        view.backgroundColor = .white
+        setupViewTitle()
+        
+        let maleButton = RoundedButton(title: "Male", border: true, filled: false)
+        let femaleButton = RoundedButton(title: "Female", border: true, filled: false)
+        view.addSubview(maleButton)
+        view.addSubview(femaleButton)
+        
+        NSLayoutConstraint.activate([
+            maleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            maleButton.topAnchor.constraint(equalTo: viewTitle.bottomAnchor, constant: 25),
+            femaleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            femaleButton.topAnchor.constraint(equalTo: maleButton.bottomAnchor, constant: 20)
+        ])
+        maleButton.addTarget(self, action: #selector(maleButtonAction), for: .touchUpInside)
         
         
     }
-    @IBOutlet private weak var maleButtonOutlet: UIButton!
-    @IBOutlet private weak var femaleButtonOutlet: UIButton!
     
-    @IBAction private func maleButtonAction() {
-        let storyboard = UIStoryboard(name: "MaleNicknameStoryboard", bundle: nil)
-        guard let maleVC = storyboard.instantiateViewController(withIdentifier: "MaleNicknameViewController") as? MaleNicknameViewController else { return }
-        navigationController?.pushViewController(maleVC, animated: true)
+    
+    private func setupViewTitle() {
+        viewTitle.text = "Choose gender"
+        viewTitle.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(viewTitle)
+        NSLayoutConstraint.activate([
+            viewTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            viewTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: UIVariables.titleTopPadding)
+        ])
+    }
+    
+    @objc private func maleButtonAction() {
+        let maleNicknameVC = MaleNicknameViewController()
+        maleNicknameVC.maleNicknameDelegate = self
+        navigationController?.pushViewController(maleNicknameVC, animated: true)
+        
+    }
+}
+
+extension GenderViewController: AccountDelegate {
+    func saveAccountConfig(_ config: AccountConfig) {
+        genderDelegate?.saveAccountConfig(config)
     }
 }

@@ -15,87 +15,13 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6g-P8-JBv">
-                                <rect key="frame" x="20" y="109" width="136" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wG0-R7-Np8">
-                                <rect key="frame" x="46.666666666666657" y="155" width="300" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="1eo-C1-K4w"/>
-                                    <constraint firstAttribute="width" constant="300" id="sdw-kR-Z67"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Frog"/>
-                                <connections>
-                                    <action selector="nicknameButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="buI-Ob-eqI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A87-Zz-V8i">
-                                <rect key="frame" x="46.666666666666657" y="213" width="300" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="7f6-IV-VRv"/>
-                                    <constraint firstAttribute="width" constant="300" id="Pkq-Eu-S7L"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Hammer"/>
-                                <connections>
-                                    <action selector="nicknameButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pN0-XH-3OT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfA-sn-qML">
-                                <rect key="frame" x="46.666666666666657" y="271" width="300" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="XD7-r5-90h"/>
-                                    <constraint firstAttribute="height" constant="38" id="cst-jg-HWi"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="King"/>
-                                <connections>
-                                    <action selector="nicknameButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Bhk-O2-W9u"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-aw-mgu">
-                                <rect key="frame" x="46.666666666666657" y="329" width="300" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="cqg-u0-jfF"/>
-                                    <constraint firstAttribute="width" constant="300" id="k06-U8-Gbx"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Gun"/>
-                                <connections>
-                                    <action selector="nicknameButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LKM-uG-EgU"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="xfA-sn-qML" firstAttribute="centerX" secondItem="A87-Zz-V8i" secondAttribute="centerX" id="93R-j3-7zo"/>
-                            <constraint firstItem="A87-Zz-V8i" firstAttribute="top" secondItem="wG0-R7-Np8" secondAttribute="bottom" constant="20" id="IKy-QY-RyZ"/>
-                            <constraint firstItem="wG0-R7-Np8" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="J4p-1c-Tio"/>
-                            <constraint firstItem="i6g-P8-JBv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Mf3-gm-XcV"/>
-                            <constraint firstItem="sQc-aw-mgu" firstAttribute="centerX" secondItem="xfA-sn-qML" secondAttribute="centerX" id="Mmb-TI-WVq"/>
-                            <constraint firstItem="xfA-sn-qML" firstAttribute="top" secondItem="A87-Zz-V8i" secondAttribute="bottom" constant="20" id="Sxf-0q-Fla"/>
-                            <constraint firstItem="wG0-R7-Np8" firstAttribute="top" secondItem="i6g-P8-JBv" secondAttribute="bottom" constant="25" id="XAe-xC-cxa"/>
-                            <constraint firstItem="i6g-P8-JBv" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="t3L-Yx-XUT"/>
-                            <constraint firstItem="sQc-aw-mgu" firstAttribute="top" secondItem="xfA-sn-qML" secondAttribute="bottom" constant="20" id="tbM-Cg-MeJ"/>
-                            <constraint firstItem="A87-Zz-V8i" firstAttribute="centerX" secondItem="wG0-R7-Np8" secondAttribute="centerX" id="zr8-Mv-onB"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="frogButtonOutlet" destination="wG0-R7-Np8" id="DI8-rP-CPX"/>
-                        <outlet property="gunButtonOutlet" destination="sQc-aw-mgu" id="uyF-EE-c2B"/>
-                        <outlet property="hammerButtonOutlet" destination="A87-Zz-V8i" id="CXX-0p-vdc"/>
-                        <outlet property="kingButtonOutlet" destination="xfA-sn-qML" id="dz3-ew-bwE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="95" y="-55"/>
         </scene>
     </scenes>
     <resources>

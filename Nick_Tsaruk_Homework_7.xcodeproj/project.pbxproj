@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CC007E6A2A3EFC07002B131F /* MaleAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC007E692A3EFC07002B131F /* MaleAvatarViewController.swift */; };
-		CC007E6C2A3EFC19002B131F /* MaleAvatarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC007E6B2A3EFC19002B131F /* MaleAvatarStoryboard.storyboard */; };
 		CC007E6E2A3F00A7002B131F /* NavigtionLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC007E6D2A3F00A7002B131F /* NavigtionLogic.swift */; };
 		CC5DBB542A3DFDE000B512F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB532A3DFDE000B512F3 /* AppDelegate.swift */; };
 		CC5DBB562A3DFDE000B512F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB552A3DFDE000B512F3 /* SceneDelegate.swift */; };
@@ -16,18 +15,19 @@
 		CC5DBB5B2A3DFDE000B512F3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5DBB592A3DFDE000B512F3 /* Home.storyboard */; };
 		CC5DBB5D2A3DFDE100B512F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC5DBB5C2A3DFDE100B512F3 /* Assets.xcassets */; };
 		CC5DBB602A3DFDE100B512F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5DBB5E2A3DFDE100B512F3 /* LaunchScreen.storyboard */; };
-		CC5DBB682A3E01B500B512F3 /* UIVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB672A3E01B500B512F3 /* UIVariables.swift */; };
-		CC5DBB6A2A3E049E00B512F3 /* CustomizeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5DBB692A3E049E00B512F3 /* CustomizeStoryboard.storyboard */; };
+		CC5DBB682A3E01B500B512F3 /* UIDefenitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB672A3E01B500B512F3 /* UIDefenitions.swift */; };
 		CC5DBB6C2A3E04B500B512F3 /* CustomizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB6B2A3E04B500B512F3 /* CustomizeViewController.swift */; };
-		CC5DBB6E2A3EDAF400B512F3 /* GenderStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5DBB6D2A3EDAF400B512F3 /* GenderStoryboard.storyboard */; };
 		CC5DBB702A3EDB1100B512F3 /* GenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB6F2A3EDB1100B512F3 /* GenderViewController.swift */; };
 		CC5DBB722A3EEC7B00B512F3 /* MaleNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB712A3EEC7B00B512F3 /* MaleNicknameViewController.swift */; };
-		CC5DBB742A3EEC8D00B512F3 /* MaleNicknameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5DBB732A3EEC8D00B512F3 /* MaleNicknameStoryboard.storyboard */; };
+		CCE07B932A40924F00AD3C64 /* FemaleNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE07B922A40924F00AD3C64 /* FemaleNicknameViewController.swift */; };
+		CCE07B952A40930D00AD3C64 /* AccountDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE07B942A40930D00AD3C64 /* AccountDelegate.swift */; };
+		CCE9B4252A409F1700A09C03 /* CustomizeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE9B4242A409F1700A09C03 /* CustomizeStoryboard.storyboard */; };
+		CCE9B4272A40A05F00A09C03 /* MaleNicknameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE9B4262A40A05F00A09C03 /* MaleNicknameStoryboard.storyboard */; };
+		CCE9B4292A40A2A300A09C03 /* GenderStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE9B4282A40A2A300A09C03 /* GenderStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC007E692A3EFC07002B131F /* MaleAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleAvatarViewController.swift; sourceTree = "<group>"; };
-		CC007E6B2A3EFC19002B131F /* MaleAvatarStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MaleAvatarStoryboard.storyboard; sourceTree = "<group>"; };
 		CC007E6D2A3F00A7002B131F /* NavigtionLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigtionLogic.swift; sourceTree = "<group>"; };
 		CC5DBB502A3DFDE000B512F3 /* Nick_Tsaruk_Homework_7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nick_Tsaruk_Homework_7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5DBB532A3DFDE000B512F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,13 +37,15 @@
 		CC5DBB5C2A3DFDE100B512F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC5DBB5F2A3DFDE100B512F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC5DBB612A3DFDE100B512F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC5DBB672A3E01B500B512F3 /* UIVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVariables.swift; sourceTree = "<group>"; };
-		CC5DBB692A3E049E00B512F3 /* CustomizeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomizeStoryboard.storyboard; sourceTree = "<group>"; };
+		CC5DBB672A3E01B500B512F3 /* UIDefenitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDefenitions.swift; sourceTree = "<group>"; };
 		CC5DBB6B2A3E04B500B512F3 /* CustomizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeViewController.swift; sourceTree = "<group>"; };
-		CC5DBB6D2A3EDAF400B512F3 /* GenderStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GenderStoryboard.storyboard; sourceTree = "<group>"; };
 		CC5DBB6F2A3EDB1100B512F3 /* GenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderViewController.swift; sourceTree = "<group>"; };
 		CC5DBB712A3EEC7B00B512F3 /* MaleNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleNicknameViewController.swift; sourceTree = "<group>"; };
-		CC5DBB732A3EEC8D00B512F3 /* MaleNicknameStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MaleNicknameStoryboard.storyboard; sourceTree = "<group>"; };
+		CCE07B922A40924F00AD3C64 /* FemaleNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FemaleNicknameViewController.swift; sourceTree = "<group>"; };
+		CCE07B942A40930D00AD3C64 /* AccountDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDelegate.swift; sourceTree = "<group>"; };
+		CCE9B4242A409F1700A09C03 /* CustomizeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomizeStoryboard.storyboard; sourceTree = "<group>"; };
+		CCE9B4262A40A05F00A09C03 /* MaleNicknameStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MaleNicknameStoryboard.storyboard; sourceTree = "<group>"; };
+		CCE9B4282A40A2A300A09C03 /* GenderStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GenderStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,21 +80,22 @@
 			children = (
 				CC5DBB532A3DFDE000B512F3 /* AppDelegate.swift */,
 				CC5DBB552A3DFDE000B512F3 /* SceneDelegate.swift */,
-				CC5DBB672A3E01B500B512F3 /* UIVariables.swift */,
+				CC5DBB672A3E01B500B512F3 /* UIDefenitions.swift */,
 				CC5DBB572A3DFDE000B512F3 /* HomeViewController.swift */,
 				CC5DBB6B2A3E04B500B512F3 /* CustomizeViewController.swift */,
 				CC5DBB6F2A3EDB1100B512F3 /* GenderViewController.swift */,
 				CC5DBB712A3EEC7B00B512F3 /* MaleNicknameViewController.swift */,
+				CCE07B922A40924F00AD3C64 /* FemaleNicknameViewController.swift */,
 				CC007E692A3EFC07002B131F /* MaleAvatarViewController.swift */,
 				CC5DBB592A3DFDE000B512F3 /* Home.storyboard */,
-				CC5DBB692A3E049E00B512F3 /* CustomizeStoryboard.storyboard */,
-				CC5DBB6D2A3EDAF400B512F3 /* GenderStoryboard.storyboard */,
 				CC5DBB5C2A3DFDE100B512F3 /* Assets.xcassets */,
 				CC5DBB5E2A3DFDE100B512F3 /* LaunchScreen.storyboard */,
 				CC5DBB612A3DFDE100B512F3 /* Info.plist */,
-				CC5DBB732A3EEC8D00B512F3 /* MaleNicknameStoryboard.storyboard */,
-				CC007E6B2A3EFC19002B131F /* MaleAvatarStoryboard.storyboard */,
 				CC007E6D2A3F00A7002B131F /* NavigtionLogic.swift */,
+				CCE07B942A40930D00AD3C64 /* AccountDelegate.swift */,
+				CCE9B4242A409F1700A09C03 /* CustomizeStoryboard.storyboard */,
+				CCE9B4262A40A05F00A09C03 /* MaleNicknameStoryboard.storyboard */,
+				CCE9B4282A40A2A300A09C03 /* GenderStoryboard.storyboard */,
 			);
 			path = Nick_Tsaruk_Homework_7;
 			sourceTree = "<group>";
@@ -155,12 +158,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC5DBB742A3EEC8D00B512F3 /* MaleNicknameStoryboard.storyboard in Resources */,
-				CC5DBB6E2A3EDAF400B512F3 /* GenderStoryboard.storyboard in Resources */,
-				CC007E6C2A3EFC19002B131F /* MaleAvatarStoryboard.storyboard in Resources */,
 				CC5DBB602A3DFDE100B512F3 /* LaunchScreen.storyboard in Resources */,
-				CC5DBB6A2A3E049E00B512F3 /* CustomizeStoryboard.storyboard in Resources */,
+				CCE9B4252A409F1700A09C03 /* CustomizeStoryboard.storyboard in Resources */,
+				CCE9B4292A40A2A300A09C03 /* GenderStoryboard.storyboard in Resources */,
 				CC5DBB5D2A3DFDE100B512F3 /* Assets.xcassets in Resources */,
+				CCE9B4272A40A05F00A09C03 /* MaleNicknameStoryboard.storyboard in Resources */,
 				CC5DBB5B2A3DFDE000B512F3 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,11 +176,13 @@
 			files = (
 				CC5DBB582A3DFDE000B512F3 /* HomeViewController.swift in Sources */,
 				CC5DBB542A3DFDE000B512F3 /* AppDelegate.swift in Sources */,
+				CCE07B932A40924F00AD3C64 /* FemaleNicknameViewController.swift in Sources */,
 				CC5DBB562A3DFDE000B512F3 /* SceneDelegate.swift in Sources */,
 				CC5DBB702A3EDB1100B512F3 /* GenderViewController.swift in Sources */,
+				CCE07B952A40930D00AD3C64 /* AccountDelegate.swift in Sources */,
 				CC007E6E2A3F00A7002B131F /* NavigtionLogic.swift in Sources */,
 				CC5DBB6C2A3E04B500B512F3 /* CustomizeViewController.swift in Sources */,
-				CC5DBB682A3E01B500B512F3 /* UIVariables.swift in Sources */,
+				CC5DBB682A3E01B500B512F3 /* UIDefenitions.swift in Sources */,
 				CC007E6A2A3EFC07002B131F /* MaleAvatarViewController.swift in Sources */,
 				CC5DBB722A3EEC7B00B512F3 /* MaleNicknameViewController.swift in Sources */,
 			);

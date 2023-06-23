@@ -1,19 +1,17 @@
 //
-//  MailNicknameViewController.swift
+//  FemaleNicknameViewController.swift
 //  Nick_Tsaruk_Homework_7
 //
-//  Created by Tsaruk Nick on 18.06.23.
+//  Created by Tsaruk Nick on 19.06.23.
 //
 
 import UIKit
 
-class MaleNicknameViewController: UIViewController {
+class FemaleNicknameViewController: UIViewController {
     let viewTitle = UILabel()
-    
-    weak var maleNicknameDelegate: AccountDelegate?
-    var config = AccountConfig(nickName: "No Name")
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = .white
         
         setupViewTitle()
@@ -53,20 +51,12 @@ class MaleNicknameViewController: UIViewController {
     @objc private func nicknameButtonAction (_ sender: UIButton) {
         switch sender.tag {
             case 0:
-                config.nickName = "Frog"
-                maleNicknameDelegate?.saveAccountConfig(config)
                 nextScreen()
             case 1:
-                config.nickName = "Hammer"
-                maleNicknameDelegate?.saveAccountConfig(config)
                 nextScreen()
             case 2:
-                config.nickName = "King"
-                maleNicknameDelegate?.saveAccountConfig(config)
                 nextScreen()
             case 3:
-                config.nickName = "Gun"
-                maleNicknameDelegate?.saveAccountConfig(config)
                 nextScreen()
             default:
                 return
@@ -84,13 +74,7 @@ class MaleNicknameViewController: UIViewController {
     }
     private func nextScreen() {
         let maleAvatarVC = MaleAvatarViewController()
-        maleAvatarVC.maleAvatarDelegate = self
-        navigationController?.pushViewController(maleAvatarVC, animated: true)
+        self.navigationController?.pushViewController(maleAvatarVC, animated: true)
     }
-}
 
-extension MaleNicknameViewController: AccountDelegate {
-    func saveAccountConfig(_ config: AccountConfig) {
-        maleNicknameDelegate?.saveAccountConfig(config)
-    }
 }

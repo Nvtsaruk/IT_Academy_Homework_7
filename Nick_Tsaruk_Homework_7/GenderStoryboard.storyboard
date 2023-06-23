@@ -15,54 +15,13 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAl-Es-2LK">
-                                <rect key="frame" x="20" y="109" width="117" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcz-B1-pOC">
-                                <rect key="frame" x="46.666666666666657" y="155" width="300" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="CoD-dM-4sV"/>
-                                    <constraint firstAttribute="height" constant="38" id="v4l-Ve-VuI"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Male"/>
-                                <connections>
-                                    <action selector="maleButtonAction" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4kN-lC-jLT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bk8-A4-yPa">
-                                <rect key="frame" x="46.666666666666657" y="198" width="300" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="7Eu-xw-v5S"/>
-                                    <constraint firstAttribute="width" constant="300" id="aFM-Ey-Uzw"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Female"/>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Bk8-A4-yPa" firstAttribute="centerX" secondItem="Gcz-B1-pOC" secondAttribute="centerX" id="9SJ-7e-DE4"/>
-                            <constraint firstItem="Gcz-B1-pOC" firstAttribute="top" secondItem="BAl-Es-2LK" secondAttribute="bottom" constant="25" id="GSt-Tf-OKI"/>
-                            <constraint firstItem="BAl-Es-2LK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="K4F-90-Y19"/>
-                            <constraint firstItem="BAl-Es-2LK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="QoF-mO-0mF"/>
-                            <constraint firstItem="Gcz-B1-pOC" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="oai-aX-j5s"/>
-                            <constraint firstItem="Bk8-A4-yPa" firstAttribute="top" secondItem="Gcz-B1-pOC" secondAttribute="bottom" constant="5" id="xCW-a6-dRs"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="femaleButtonOutlet" destination="Bk8-A4-yPa" id="axF-6V-Fv7"/>
-                        <outlet property="maleButtonOutlet" destination="Gcz-B1-pOC" id="3AJ-XQ-tol"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6" y="-2"/>
+            <point key="canvasLocation" x="95" y="-55"/>
         </scene>
     </scenes>
     <resources>
