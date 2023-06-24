@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC007E6A2A3EFC07002B131F /* MaleAvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC007E692A3EFC07002B131F /* MaleAvatarViewController.swift */; };
-		CC007E6E2A3F00A7002B131F /* NavigtionLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC007E6D2A3F00A7002B131F /* NavigtionLogic.swift */; };
+		CC007E6A2A3EFC07002B131F /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC007E692A3EFC07002B131F /* AvatarViewController.swift */; };
 		CC5DBB542A3DFDE000B512F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB532A3DFDE000B512F3 /* AppDelegate.swift */; };
 		CC5DBB562A3DFDE000B512F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB552A3DFDE000B512F3 /* SceneDelegate.swift */; };
 		CC5DBB582A3DFDE000B512F3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5DBB572A3DFDE000B512F3 /* HomeViewController.swift */; };
@@ -27,8 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CC007E692A3EFC07002B131F /* MaleAvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaleAvatarViewController.swift; sourceTree = "<group>"; };
-		CC007E6D2A3F00A7002B131F /* NavigtionLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigtionLogic.swift; sourceTree = "<group>"; };
+		CC007E692A3EFC07002B131F /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 		CC5DBB502A3DFDE000B512F3 /* Nick_Tsaruk_Homework_7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nick_Tsaruk_Homework_7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5DBB532A3DFDE000B512F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5DBB552A3DFDE000B512F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,13 +83,12 @@
 				CC5DBB6B2A3E04B500B512F3 /* CustomizeViewController.swift */,
 				CC5DBB6F2A3EDB1100B512F3 /* GenderViewController.swift */,
 				CC5DBB712A3EEC7B00B512F3 /* MaleNicknameViewController.swift */,
+				CC007E692A3EFC07002B131F /* AvatarViewController.swift */,
 				CCE07B922A40924F00AD3C64 /* FemaleNicknameViewController.swift */,
-				CC007E692A3EFC07002B131F /* MaleAvatarViewController.swift */,
 				CC5DBB592A3DFDE000B512F3 /* Home.storyboard */,
 				CC5DBB5C2A3DFDE100B512F3 /* Assets.xcassets */,
 				CC5DBB5E2A3DFDE100B512F3 /* LaunchScreen.storyboard */,
 				CC5DBB612A3DFDE100B512F3 /* Info.plist */,
-				CC007E6D2A3F00A7002B131F /* NavigtionLogic.swift */,
 				CCE07B942A40930D00AD3C64 /* AccountDelegate.swift */,
 				CCE9B4242A409F1700A09C03 /* CustomizeStoryboard.storyboard */,
 				CCE9B4262A40A05F00A09C03 /* MaleNicknameStoryboard.storyboard */,
@@ -180,10 +177,9 @@
 				CC5DBB562A3DFDE000B512F3 /* SceneDelegate.swift in Sources */,
 				CC5DBB702A3EDB1100B512F3 /* GenderViewController.swift in Sources */,
 				CCE07B952A40930D00AD3C64 /* AccountDelegate.swift in Sources */,
-				CC007E6E2A3F00A7002B131F /* NavigtionLogic.swift in Sources */,
 				CC5DBB6C2A3E04B500B512F3 /* CustomizeViewController.swift in Sources */,
 				CC5DBB682A3E01B500B512F3 /* UIDefenitions.swift in Sources */,
-				CC007E6A2A3EFC07002B131F /* MaleAvatarViewController.swift in Sources */,
+				CC007E6A2A3EFC07002B131F /* AvatarViewController.swift in Sources */,
 				CC5DBB722A3EEC7B00B512F3 /* MaleNicknameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

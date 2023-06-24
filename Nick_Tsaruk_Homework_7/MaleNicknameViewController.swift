@@ -1,47 +1,22 @@
-//
-//  MailNicknameViewController.swift
-//  Nick_Tsaruk_Homework_7
-//
-//  Created by Tsaruk Nick on 18.06.23.
-//
-
 import UIKit
 
 class MaleNicknameViewController: UIViewController {
     let viewTitle = UILabel()
     
     weak var maleNicknameDelegate: AccountDelegate?
-    var config = AccountConfig(nickName: "No Name")
+    
+    var config = AccountConfig(nickName: "")
+    
+    let frogButton = RoundedButton(title: "Frog", border: true, filled: false)
+    let hammerButton = RoundedButton(title: "Hammer", border: true, filled: false)
+    let kingButton = RoundedButton(title: "King", border: true, filled: false)
+    let gunButton = RoundedButton(title: "Gun", border: true, filled: false)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         
-        setupViewTitle()
-        
-        let frogButton = RoundedButton(title: "Frog", border: true, filled: false)
-        frogButton.tag = 0
-        let hammerButton = RoundedButton(title: "Hammer", border: true, filled: false)
-        hammerButton.tag = 1
-        let kingButton = RoundedButton(title: "King", border: true, filled: false)
-        kingButton.tag = 2
-        let gunButton = RoundedButton(title: "Gun", border: true, filled: false)
-        gunButton.tag = 3
-        
-        view.addSubview(frogButton)
-        view.addSubview(hammerButton)
-        view.addSubview(kingButton)
-        view.addSubview(gunButton)
-        
-        NSLayoutConstraint.activate([
-            frogButton.topAnchor.constraint(equalTo: viewTitle.bottomAnchor, constant: 25),
-            frogButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            hammerButton.topAnchor.constraint(equalTo: frogButton.bottomAnchor, constant: 20),
-            hammerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            kingButton.topAnchor.constraint(equalTo: hammerButton.bottomAnchor, constant: 20),
-            kingButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            gunButton.topAnchor.constraint(equalTo: kingButton.bottomAnchor, constant: 20),
-            gunButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-        ])
+        setupUI()
         
         frogButton.addTarget(self, action: #selector(nicknameButtonAction), for: .touchUpInside)
         hammerButton.addTarget(self, action: #selector(nicknameButtonAction), for: .touchUpInside)
@@ -73,19 +48,44 @@ class MaleNicknameViewController: UIViewController {
         }
     }
     
-    private func setupViewTitle() {
+    private func setupUI() {
+        view.backgroundColor = .systemBackground
+        
+        frogButton.tag = 0
+        hammerButton.tag = 1
+        kingButton.tag = 2
+        gunButton.tag = 3
+        
         viewTitle.text = "Choose nickname"
         viewTitle.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(viewTitle)
+        view.addSubview(frogButton)
+        view.addSubview(hammerButton)
+        view.addSubview(kingButton)
+        view.addSubview(gunButton)
+        
         NSLayoutConstraint.activate([
             viewTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            viewTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: UIVariables.titleTopPadding)
+            viewTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: UIVariables.titleTopPadding),
+            
+            frogButton.topAnchor.constraint(equalTo: viewTitle.bottomAnchor, constant: 25),
+            frogButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            hammerButton.topAnchor.constraint(equalTo: frogButton.bottomAnchor, constant: 20),
+            hammerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            kingButton.topAnchor.constraint(equalTo: hammerButton.bottomAnchor, constant: 20),
+            kingButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            gunButton.topAnchor.constraint(equalTo: kingButton.bottomAnchor, constant: 20),
+            gunButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
     private func nextScreen() {
-        let maleAvatarVC = MaleAvatarViewController()
-        maleAvatarVC.maleAvatarDelegate = self
-        navigationController?.pushViewController(maleAvatarVC, animated: true)
+        let avatarVC = AvatarViewController()
+        avatarVC.avatarDelegate = self
+        navigationController?.pushViewController(avatarVC, animated: true)
     }
 }
 
