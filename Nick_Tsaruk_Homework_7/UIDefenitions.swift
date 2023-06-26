@@ -5,24 +5,19 @@ enum UIVariables {
     static let gray = UIColor.systemGray4
     static let clearColor = UIColor.clear
     static let normalColor = UIColor.systemPurple
-//    static let pressedColor = UIColor.systemPink.cgColor
     static let borderWidth:CGFloat = 1
     static let buttonCornerRadius:CGFloat = 10
     static let titleTopPadding:CGFloat = 70
+    static let backgroundColor = UIColor.systemBackground
 }
 
 let largeConfig = UIImage.SymbolConfiguration(pointSize: 100, weight: .semibold, scale: .large)
 
 enum Logos {
-    enum MaleLogo{
         static let ant = UIImage(systemName: "ant", withConfiguration: largeConfig)
         static let person = UIImage(systemName: "person", withConfiguration: largeConfig)
         static let crown = UIImage(systemName: "crown", withConfiguration: largeConfig)
         static let star = UIImage(systemName: "star", withConfiguration: largeConfig)
-    }
-    enum FemaleLogo{
-        
-    }
 }
 
 class RoundedButton: UIButton {

@@ -34,7 +34,7 @@ class CustomizeViewController: UIViewController {
         
     }
     private func setupUI() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = UIVariables.backgroundColor
         
         avatarView.backgroundColor = UIVariables.lightGray
         avatarView.translatesAutoresizingMaskIntoConstraints = false

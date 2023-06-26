@@ -19,7 +19,7 @@ class GenderViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = UIVariables.backgroundColor
         
         viewTitle.text = "Choose gender"
         viewTitle.translatesAutoresizingMaskIntoConstraints = false

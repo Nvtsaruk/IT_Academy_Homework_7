@@ -10,10 +10,10 @@ class AvatarViewController: UIViewController {
     weak var avatarDelegate: AccountDelegate?
     var config = AccountConfig(nickName: "")
     
-    let antButton = RoundedButton(title: "",image: Logos.MaleLogo.ant, border: false, filled: false)
-    let personButton = RoundedButton(title: "",image: Logos.MaleLogo.person, border: false, filled: false)
-    let crownButton = RoundedButton(title: "",image: Logos.MaleLogo.crown, border: false, filled: false)
-    let starButton = RoundedButton(title: "",image: Logos.MaleLogo.star, border: false, filled: false)
+    let antButton = RoundedButton(title: "",image: Logos.ant, border: false, filled: false)
+    let personButton = RoundedButton(title: "",image: Logos.person, border: false, filled: false)
+    let crownButton = RoundedButton(title: "",image: Logos.crown, border: false, filled: false)
+    let starButton = RoundedButton(title: "",image: Logos.star, border: false, filled: false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class AvatarViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = UIVariables.backgroundColor
         
         viewTitle.text = "Choose avatar"
         viewTitle.translatesAutoresizingMaskIntoConstraints = false

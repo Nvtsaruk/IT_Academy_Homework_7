@@ -49,7 +49,7 @@ class FemaleNicknameViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = UIVariables.backgroundColor
         
         foxButton.tag = 0
         mirrorButton.tag = 1

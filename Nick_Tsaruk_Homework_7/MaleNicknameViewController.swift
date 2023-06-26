@@ -49,7 +49,7 @@ class MaleNicknameViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = UIVariables.backgroundColor
         
         frogButton.tag = 0
         hammerButton.tag = 1
